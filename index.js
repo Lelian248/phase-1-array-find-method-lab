@@ -65,10 +65,10 @@ const record = [
 function superbowlWin(record){
     const result = record.find(recordElement => recordElement.result === "W");
     console.log(result)
-    if (typeof result !== undefined) {
+    if ( result !== undefined) {
       return result.year;
-   }else return result
+   }else return undefined
 }   
  
-//console.log(superbowlWin(record))
+console.log(superbowlWin(record))
 console.log(superbowlWin(sadReality))

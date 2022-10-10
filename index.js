@@ -60,16 +60,15 @@ const record = [
     { year: "1961", result: "N/A"},
     { year: "1960", result: "N/A"}
   ]
-/* function superbowlWin(recordElement){
-   return recordElement.result ==="W"
-} */
+  const sadReality =  [ { result: "N/A" }, { result: "N/A" }, { result: "N/A" } ]
 
-function superbowlWin(recordElement){
-    if (recordElement.result ==="W"){
-     return true
-    }
- }
+function superbowlWin(record){
+    const result = record.find(recordElement => recordElement.result === "W");
+    console.log(result)
+    if (typeof result !== undefined) {
+      return result.year;
+   }else return result
+}   
  
-
-const result = record.find(superbowlWin)
-console.log(result.year)
+//console.log(superbowlWin(record))
+console.log(superbowlWin(sadReality))
